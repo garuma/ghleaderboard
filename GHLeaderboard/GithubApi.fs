@@ -4,6 +4,8 @@ open System
 open FSharp.Data
 
 module GitHubApi =
+    let accessToken = "..."
+
     type GitHubEntity =
         | User of string
         | Organization of string
@@ -22,7 +24,7 @@ module GitHubApi =
     type GHProjectsUrl = string
 
     let makeStatsUrl organization repository : GHStatsUrl =
-        sprintf "https://api.github.com/repos/%s/%s/stats/contributors" organization repository
+        sprintf "https://api.github.com/repos/%s/%s/stats/contributors?access_token=%s" organization repository accessToken
     
     let fetchStats (url: GHStatsUrl) =
         async {
@@ -46,7 +48,7 @@ module GitHubApi =
 
     let makeProjectsUrl entity : GHProjectsUrl =
         match entity with
-        | User user -> sprintf "https://api.github.com/users/%s/repos" user
+        | User user -> sprintf "https://api.github.com/users/%s/repos?access_token=%s" user accessToken
         | Organization org -> sprintf "https://api.github.com/orgs/%s/repos" org
     
     let fetchProjectsNamesFor (entity : GHProjectsUrl) =
