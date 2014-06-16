@@ -12,7 +12,7 @@ open Android.Graphics
 open Android.Support.V4.App
 open Android.Support.V4.Widget
 
-[<Activity (Label = "GH Leaderboard", MainLauncher = true, Theme = "@style/LeaderboardActionBarTheme")>]
+[<Activity (Label = "GitHub Leaderboard", MainLauncher = true, Theme = "@style/LeaderboardActionBarTheme")>]
 type MainActivity () =
     inherit Android.Support.V4.App.FragmentActivity ()
 
