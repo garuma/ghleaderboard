@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/user_header_background">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:id="@+id/userAvatar"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginRight="4dp" />
+    <TextView
+        android:text="garuma"
+        android:layout_width="0px"
+        android:layout_height="match_parent"
+        android:id="@+id/userAccount"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:textColor="#fafafa"
+        android:layout_marginRight="8dp"
+        android:textSize="18sp"
+        android:layout_marginBottom="4dp" />
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:background="#60ffffff"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp" />
+    <ImageButton
+        android:layout_width="48dp"
+        android:layout_height="match_parent"
+        android:id="@+id/button1"
+        style="?android:attr/borderlessButtonStyle"
+        android:gravity="center"
+        android:src="@drawable/ic_bottom_action"
+        android:scaleType="center" />
+</LinearLayout>

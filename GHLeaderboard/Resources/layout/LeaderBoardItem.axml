@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeightLarge"
+    android:background="@drawable/item_bg"
+    android:paddingRight="12dp"
+    android:paddingBottom="4dp"
+    android:paddingLeft="8dp">
+    <ImageView
+        android:src="@android:drawable/ic_menu_gallery"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:id="@+id/userAvatar"
+        android:layout_gravity="center_vertical" />
+    <TextView
+        android:text="garuma"
+        android:layout_width="0px"
+        android:layout_height="wrap_content"
+        android:id="@+id/username"
+        android:layout_weight="1"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_gravity="center"
+        android:textSize="20sp" />
+    <TextView
+        style="@style/statTextStyle"
+        android:text="1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/commitCount"
+        android:drawableBottom="@drawable/ic_commit"
+        android:gravity="center"
+        android:layout_gravity="center" />
+    <TextView
+        style="@style/statTextStyle"
+        android:text="2000"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/additions"
+        android:textColor="@color/theme_green_color"
+        android:drawableBottom="@drawable/ic_additions"
+        android:layout_gravity="center" />
+    <TextView
+        style="@style/statTextStyle"
+        android:text="800"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/removals"
+        android:textColor="@color/theme_red_color"
+        android:drawableBottom="@drawable/ic_removals"
+        android:layout_gravity="center" />
+    <TextView
+        android:text="#1"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/placement"
+        android:minWidth="50dp"
+        android:gravity="right|top"
+        android:textSize="@dimen/score_text_size"
+        android:textColor="#e0e0e0" />
+</LinearLayout>

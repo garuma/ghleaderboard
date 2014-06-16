@@ -1,0 +1,7 @@
+*.dll
+*.mdb
+*/out/*
+*/bin/*
+*/obj/*
+Components/*
+packages/*

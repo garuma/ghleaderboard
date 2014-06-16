@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+	<color name="main_bg">#dfdfdf</color>
+	<color name="drawer_background">#dddddd</color>
+	<color name="user_header_background">#4ea788</color>
+	<color name="list_selector_bg_main">#20000000</color>
+	<color name="theme_red_color">#c34600</color>
+	<color name="theme_green_color">#459d7e</color>
+
+	<dimen name="item_corner_radius">1dp</dimen>
+	<dimen name="score_text_size">28sp</dimen>
+
+	<style name="LeaderboardActionBarTheme" parent="@android:style/Theme.Holo.Light.DarkActionBar">
+		<item name="android:windowBackground">@color/main_bg</item>
+	</style>
+
+	<style name="statTextStyle">
+		<item name="android:gravity">center</item>
+		<item name="android:fontFamily">sans-serif-condensed</item>
+		<item name="android:textSize">16sp</item>
+		<item name="android:layout_marginRight">4dp</item>
+        <item name="android:layout_marginLeft">4dp</item>
+	</style>
+</resources>
