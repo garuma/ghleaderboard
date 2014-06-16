@@ -13,7 +13,8 @@
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:id="@+id/userAvatar"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical"
+        android:visibility="invisible" />
     <TextView
         android:text="garuma"
         android:layout_width="0px"

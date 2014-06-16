@@ -53,6 +53,7 @@ type StatsAdapter (context: Context) =
         |> List.iter (fun (id, count) -> view.FindViewById<TextView>(id).Text <- string count)
 
         let avatarView = view.FindViewById<ImageView>(Resource_Id.userAvatar)
+        avatarView.Visibility <- ViewStates.Invisible
         let sync = synchronizationContext.Force()
         let loadAvatar = async {
             let request = WebRequest.CreateHttp stat.Avatar
@@ -60,7 +61,9 @@ type StatsAdapter (context: Context) =
             let bmp = BitmapFactory.DecodeStream(response.GetResponseStream())
             do! Async.SwitchToContext sync
             avatarView.SetImageDrawable(new AvatarDrawable(bmp))
+            avatarView.Visibility <- ViewStates.Visible
         }
+        Async.Start loadAvatar
 
         let placement = view.FindViewById<TextView>(Resource_Id.placement)
         placement.Text <- string (position+1)
