@@ -1,5 +1,6 @@
 GitHub Leaderboard
 ==================
 
-A F# Xamarin.Android app to tell you the best committers of the week on repositories you contribute to.
+A F# Xamarin.Android app showing the best committers of the week on repositories you are involved in.
 
+![screenshot](https://neteril.org/~jeremie/device-2014-06-16-215844-small.png)
