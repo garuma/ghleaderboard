@@ -30,7 +30,7 @@ module GitHubApi =
             let stats =
                 rawStats
                 |> Seq.where (fun s -> s.Total > 0 && (Seq.last s.Weeks).C > 0)
-                |> Seq.sortBy (fun s -> (Seq.last s.Weeks).C)
+                |> Seq.sortBy (fun s -> -(Seq.last s.Weeks).C)
                 |> Seq.truncate 20
             return [
                 for stat in stats ->
