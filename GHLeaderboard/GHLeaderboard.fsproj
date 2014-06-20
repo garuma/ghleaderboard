@@ -67,6 +67,7 @@
     <Compile Include="PrefsManager.fs" />
     <Compile Include="StatsFragment.fs" />
     <Compile Include="MainActivity.fs" />
+    <Compile Include="LoginDialogFragment.fs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -117,6 +118,7 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\ic_removals.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_additions.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\ic_removals.png" />
+    <AndroidResource Include="Resources\layout\LoginDialogLayout.axml" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\AboutAssets.txt" />
