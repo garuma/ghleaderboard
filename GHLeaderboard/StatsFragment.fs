@@ -62,6 +62,8 @@ type StatsAdapter (context: Context) =
             do! Async.SwitchToContext sync
             avatarView.SetImageDrawable(new AvatarDrawable(bmp))
             avatarView.Visibility <- ViewStates.Visible
+            avatarView.Alpha <- 0.0f
+            avatarView.Animate().Alpha(1.0f).SetDuration(300L).Start()
         }
         Async.Start loadAvatar
 
