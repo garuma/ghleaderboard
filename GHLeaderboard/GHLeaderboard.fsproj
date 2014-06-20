@@ -64,6 +64,7 @@
     <Compile Include="Properties\AssemblyInfo.fs" />
     <Compile Include="AvatarDrawable.fs" />
     <Compile Include="GithubApi.fs" />
+    <Compile Include="PrefsManager.fs" />
     <Compile Include="StatsFragment.fs" />
     <Compile Include="MainActivity.fs" />
   </ItemGroup>
