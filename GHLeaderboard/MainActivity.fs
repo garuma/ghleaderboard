@@ -40,7 +40,7 @@ type MainActivity () =
         let menuList = this.FindViewById<ListView>(Resource_Id.left_drawer)
         let fillProjectMenu =
             async {
-                let url = GitHubApi.makeProjectsUrl (GitHubApi.Organization "mono")
+                let url = GitHubApi.makeProjectsUrl (PrefsManager.getUserToken this) (GitHubApi.Organization "mono")
                 let! projects = GitHubApi.fetchProjectsNamesFor url
                 do! Async.SwitchToContext syncContext
                 let projectAdapter = new ArrayAdapter(this, Resource_Layout.MenuItemLayout, List.toArray projects)

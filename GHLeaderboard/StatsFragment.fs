@@ -24,7 +24,7 @@ type StatsAdapter (context: Context) =
 
     member this.LoadItemsAsync (entity, repository) =
         async {
-            let url = GitHubApi.makeStatsUrl entity repository
+            let url = GitHubApi.makeStatsUrl (PrefsManager.getUserToken context) entity repository
             let! stats = GitHubApi.fetchStats url
             backingStore <- List.toArray stats
         }
